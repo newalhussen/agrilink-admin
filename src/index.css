@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+/*
+ * AgriLink "Organic" design system tokens, copied from the Claude Design output
+ * (the Organic design system styles.css). Every colour, font, radius and shadow in the app comes from here.
+ * The shadcn/ui semantic variables at the bottom are mapped onto these tokens.
+ */
+:root {
+  --color-bg: #f5ead8;
+  --color-surface: #ebddc5;
+  --color-text: #201e1d;
+  --color-accent: #c67139;
+  --color-accent-2: #7a8a5e;
+  --color-divider: color-mix(in srgb, #201e1d 16%, transparent);
+
+  --color-neutral-100: #f9f4ed;
+  --color-neutral-200: #eee7db;
+  --color-neutral-300: #dcd3c4;
+  --color-neutral-400: #c0b6a5;
+  --color-neutral-500: #a19786;
+  --color-neutral-600: #82796a;
+  --color-neutral-700: #645c50;
+  --color-neutral-800: #474238;
+  --color-neutral-900: #2e2b25;
+
+  --color-accent-100: #fff2eb;
+  --color-accent-200: #ffe1d0;
+  --color-accent-300: #ffc6a5;
+  --color-accent-400: #f6a06b;
+  --color-accent-500: #d67f48;
+  --color-accent-600: #b2622d;
+  --color-accent-700: #8c491a;
+  --color-accent-800: #643312;
+  --color-accent-900: #402310;
+
+  --color-accent-2-100: #f0fae1;
+  --color-accent-2-200: #e1eecc;
+  --color-accent-2-300: #ccdbb2;
+  --color-accent-2-400: #aebf92;
+  --color-accent-2-500: #8fa073;
+  --color-accent-2-600: #728157;
+  --color-accent-2-700: #56633f;
+  --color-accent-2-800: #3d472b;
+  --color-accent-2-900: #272e1b;
+
+  --font-heading: "Caprasimo", system-ui, sans-serif;
+  --font-body: "Figtree", "Noto Sans Ethiopic", system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+
+  --shadow-sm: 0 1px 2px color-mix(in srgb, #2e2b25 14%, transparent);
+  --shadow-md: 0 3px 10px color-mix(in srgb, #2e2b25 16%, transparent);
+  --shadow-lg: 0 12px 32px color-mix(in srgb, #2e2b25 22%, transparent);
+
+  /* shadcn/ui semantic tokens -> Organic */
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text);
+  --popover: var(--color-neutral-100);
+  --popover-foreground: var(--color-text);
+  --primary: var(--color-accent);
+  --primary-foreground: var(--color-bg);
+  --secondary: var(--color-accent-2);
+  --secondary-foreground: var(--color-neutral-100);
+  --muted: var(--color-neutral-200);
+  --muted-foreground: var(--color-neutral-700);
+  --accent: var(--color-accent-100);
+  --accent-foreground: var(--color-accent-800);
+  --destructive: var(--color-accent-800);
+  --destructive-foreground: var(--color-accent-100);
+  --border: var(--color-divider);
+  --input: var(--color-divider);
+  --ring: var(--color-accent);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-surface: var(--color-surface);
+  --color-sage-100: var(--color-accent-2-100);
+  --color-sage-200: var(--color-accent-2-200);
+  --color-sage-300: var(--color-accent-2-300);
+  --color-sage-400: var(--color-accent-2-400);
+  --color-sage-500: var(--color-accent-2-500);
+  --color-sage-600: var(--color-accent-2-600);
+  --color-sage-700: var(--color-accent-2-700);
+  --color-sage-800: var(--color-accent-2-800);
+  --color-sage-900: var(--color-accent-2-900);
+  --color-terra-100: var(--color-accent-100);
+  --color-terra-200: var(--color-accent-200);
+  --color-terra-300: var(--color-accent-300);
+  --color-terra-400: var(--color-accent-400);
+  --color-terra-500: var(--color-accent-500);
+  --color-terra-600: var(--color-accent-600);
+  --color-terra-700: var(--color-accent-700);
+  --color-terra-800: var(--color-accent-800);
+  --color-terra-900: var(--color-accent-900);
+  --color-sand-100: var(--color-neutral-100);
+  --color-sand-200: var(--color-neutral-200);
+  --color-sand-300: var(--color-neutral-300);
+  --color-sand-400: var(--color-neutral-400);
+  --color-sand-500: var(--color-neutral-500);
+  --color-sand-600: var(--color-neutral-600);
+  --color-sand-700: var(--color-neutral-700);
+  --color-sand-800: var(--color-neutral-800);
+  --color-sand-900: var(--color-neutral-900);
+
+  --font-heading: "Caprasimo", system-ui, sans-serif;
+  --font-sans: "Figtree", "Noto Sans Ethiopic", system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-divider);
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    margin: 0;
+  }
+  h1 { font-size: 42px; }
+  h2 { font-size: 32px; }
+  h3 { font-size: 25px; }
+  h4 { font-size: 20px; }
+  a { color: var(--color-accent-700); text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-800); }
+  :focus { outline: none; }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  ::selection { background: color-mix(in srgb, var(--color-accent) 30%, transparent); }
+  button { font-family: inherit; }
+}
+
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* The design's data table: themed header, whisper row rules, no heavy borders. */
+.ds-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ds-table th {
+  text-align: left; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--color-neutral-700); padding: 10px 14px; white-space: nowrap;
+  border-bottom: 1px solid var(--color-divider);
+}
+.ds-table td { padding: 13px 14px; border-bottom: 1px solid color-mix(in srgb, var(--color-text) 8%, transparent); vertical-align: middle; }
+.ds-table tbody tr { transition: background 120ms; }
+.ds-table tbody tr.clickable { cursor: pointer; }
+.ds-table tbody tr.clickable:hover { background: color-mix(in srgb, var(--color-accent) 7%, transparent); }
+
+@keyframes ds-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.45; } }
+.ds-skeleton { background: var(--color-neutral-300); border-radius: 12px; animation: ds-pulse 1.4s ease-in-out infinite; }
